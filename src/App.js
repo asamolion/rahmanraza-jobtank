@@ -3,6 +3,8 @@ import React, { Component } from "react";
 // Custom Components
 import Header from "./components/Header";
 import Progress from "./components/Progress/Progress";
+import Section from "./components/Section";
+import Info from "./components/Info";
 
 // Material-UI
 import { deepOrange500 } from "material-ui/styles/colors";
@@ -11,13 +13,6 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
 // Font
 import "typeface-roboto";
-
-// Click handler
-// import injectTapEventPlugin from "react-tap-event-plugin";
-// injectTapEventPlugin();
-
-// Styles
-
 // Theme
 const muiTheme = getMuiTheme({
   palette: {
@@ -31,7 +26,12 @@ class App extends Component {
       <MuiThemeProvider muiTheme={muiTheme}>
         <React.Fragment>
           <Header />
-          <Progress />
+          <Section>
+            <Progress />
+          </Section>
+          <Section heading="Personal Information">
+            <Info />
+          </Section>
         </React.Fragment>
       </MuiThemeProvider>
     );

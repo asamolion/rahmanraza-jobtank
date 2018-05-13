@@ -1,27 +1,39 @@
 import React, { Component } from "react";
 
-import {
-  deepOrange700,
-  grey300,
-  grey500
-} from "material-ui/styles/colors";
+import { deepOrange700, grey300, grey500 } from "material-ui/styles/colors";
+
+const indicatorStyle = {
+  display: "flex",
+  justifyContent: "space-around",
+  alignItems: "center",
+  margin: "8px 0"
+};
 
 const iconStyle = {
   color: deepOrange700,
-  display: "inline-block",
+  display: "block",
+  padding: "5px 2px",
+  marginRight: "10px",
   fontSize: "30px"
 };
 
-const dottedIconContainer = {
-  display: "inline-block",
-  minWidth: "70%",
-  padding: "0",
-  marginLeft: "10px"
+const inactiveIconStyle = {
+  ...iconStyle,
+  color: grey300
 };
-
 const labelStyle = {
   color: grey500,
-  display: "inline-block"
+  display: "block",
+  padding: "2px",
+  marginRight: "10px",
+  width: "auto",
+  whiteSpace: "nowrap"
+};
+
+const dottedIconContainer = {
+  display: "block",
+  padding: "0",
+  marginLeft: "10px"
 };
 
 const dottedIcon = {
@@ -34,15 +46,16 @@ const dottedIcon = {
 class Indicator extends Component {
   render() {
     return (
-      <React.Fragment>
-        <i style={iconStyle} className="material-icons">
+      <div style={indicatorStyle}>
+        <i
+          style={this.props.completed ? iconStyle : inactiveIconStyle}
+          className="material-icons"
+        >
           check_circle
         </i>
         <span style={labelStyle}>{this.props.label}</span>
-        <div style={dottedIconContainer}>
-          <i style={dottedIcon} />
-        </div>
-      </React.Fragment>
+        <i style={dottedIcon} />
+      </div>
     );
   }
 }

@@ -3,34 +3,30 @@ import React from "react";
 import Indicator from "./Indicator";
 
 const containerStyle = {
-  maxWidth: "60%"
+  maxWidth: "65%"
 };
 
 const rowStyle = {
-  padding: "40px 0"
+  padding: "40px 0",
+  borderBottom: "1px solid #e9e9e9"
 };
 
 const colStyle = {
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  margin: "8px 0"
+  margin: "8px 5px"
 };
 
 class Progress extends React.Component {
   render() {
     return (
-      <div style={containerStyle} className="container">
-        <div style={rowStyle} className="row">
-          <div style={colStyle} className="col-4">
-            <Indicator label="Upload" />
-          </div>
-          <div style={colStyle} className="col-4">
-            <Indicator />
-          </div>
-          <div style={colStyle} className="col-4">
-            <Indicator />
-          </div>
+      <div style={rowStyle} className="row">
+        <div style={colStyle} className="col-4">
+          <Indicator label="Upload" completed={true} />
+        </div>
+        <div style={colStyle} className="col-4">
+          <Indicator label="Analyze & Review" completed={true} />
+        </div>
+        <div style={colStyle} className="col-4">
+          <Indicator label="Submit" completed={false} />
         </div>
       </div>
     );
