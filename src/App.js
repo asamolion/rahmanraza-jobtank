@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Progress from "./components/Progress/Progress";
 import Section from "./components/Section";
 import Info from "./components/Info";
+import EducationContainer from "./components/Education/EducationContainer";
 
 // Material-UI
 import { deepOrange500 } from "material-ui/styles/colors";
@@ -31,6 +32,9 @@ class App extends Component {
           </Section>
           <Section heading="Personal Information">
             <Info />
+          </Section>
+          <Section heading="Education">
+            <EducationContainer />
           </Section>
         </React.Fragment>
       </MuiThemeProvider>
