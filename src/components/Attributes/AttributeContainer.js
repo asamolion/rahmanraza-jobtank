@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { grey500 } from "material-ui/styles/colors";
 
-import Education from "./Education";
+import AttributeInput from "./AttributeInput";
 
 const rowStyles = {
   position: "relative"
@@ -23,17 +23,19 @@ const addButtonStyles = {
   color: grey500
 };
 
-class EducationContainer extends Component {
-  state = { inputs: [0] };
+class AttributeContainer extends Component {
+  state = {
+    inputs: [0],
+  };
 
-  addEducation = evt => {
+  addAttribute = evt => {
     evt.preventDefault();
     this.setState({
       inputs: [...this.state.inputs, this.state.inputs.length]
     });
   };
 
-  removeEducation = () => {
+  removeAttribute = () => {
     let inputs = [...this.state.inputs];
     inputs.pop();
 
@@ -49,15 +51,16 @@ class EducationContainer extends Component {
       <div style={rowStyles} className="row">
         <div style={{ marginLeft: "0" }} className="col-8">
           {this.state.inputs.map(value => (
-            <Education
+            <AttributeInput
               key={value}
               number={value}
-              closeHandler={this.removeEducation}
+              labels={this.props.labels}
+              closeHandler={this.removeAttribute}
             />
           ))}
         </div>
         <div style={addButtonContainer} className="col-4">
-          <a style={addButtonStyles} onClick={this.addEducation}>
+          <a style={addButtonStyles} onClick={this.addAttribute}>
             + Add Attribute
           </a>
         </div>
@@ -66,4 +69,4 @@ class EducationContainer extends Component {
   }
 }
 
-export default EducationContainer;
+export default AttributeContainer;
