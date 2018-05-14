@@ -6,10 +6,6 @@ import MenuItem from "material-ui/MenuItem";
 import Dropdown from "../Dropdown";
 import InputField from "../InputField";
 
-const rowStyles = {
-  position: "relative"
-};
-
 const dottedContainer = {
   position: "relative",
   border: "1px dashed #ccc",
@@ -28,7 +24,7 @@ const iconStyle = {
 };
 
 const dropdownContainerStyles = {
-  height: "48px",
+  height: "48px"
 };
 
 class EmploymentInput extends Component {

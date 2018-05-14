@@ -10,8 +10,6 @@ import EmploymentContainer from "./components/Employment/EmploymentContainer";
 import RatedInputContainer from "./components/Ratings/RatedInputContainer";
 import Expectation from "./components/Expectation";
 import AttributeContainer from "./components/Attributes/AttributeContainer";
-import AttributeInput from "./components/Attributes/AttributeInput";
-import InputField from "./components/InputField";
 
 // Material-UI
 import { deepOrange500 } from "material-ui/styles/colors";

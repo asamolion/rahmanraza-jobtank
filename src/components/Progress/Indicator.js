@@ -30,12 +30,6 @@ const labelStyle = {
   whiteSpace: "nowrap"
 };
 
-const dottedIconContainer = {
-  display: "block",
-  padding: "0",
-  marginLeft: "10px"
-};
-
 const dottedIcon = {
   display: "block",
   width: "100%",

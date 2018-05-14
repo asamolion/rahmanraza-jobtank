@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
-import { deepOrange500, grey300, grey500 } from "material-ui/styles/colors";
-import AutoComplete from "material-ui/AutoComplete";
+import { grey500 } from "material-ui/styles/colors";
 import Checkbox from "material-ui/Checkbox";
 import MenuItem from "material-ui/MenuItem";
 
@@ -14,17 +13,6 @@ const checkBoxStyles = {
 
 const checkboxLableStyles = {
   color: grey500
-};
-
-const autoCompleteStyles = {
-  border: "1px solid",
-  borderColor: grey300,
-  borderRadius: "15px",
-  height: "40px",
-  width: "100%",
-  "& hr": {
-    display: "none"
-  }
 };
 
 class Expecation extends Component {

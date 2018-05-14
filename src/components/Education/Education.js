@@ -4,9 +4,7 @@ import { grey400 } from "material-ui/styles/colors";
 
 import InputField from "../InputField";
 
-const rowStyles = {
-  position: "relative"
-};
+
 
 const dottedContainer = {
   position: "relative",

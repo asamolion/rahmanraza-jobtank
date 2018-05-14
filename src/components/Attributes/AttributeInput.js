@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 
 import { grey400 } from "material-ui/styles/colors";
-import MenuItem from "material-ui/MenuItem";
 
-import Dropdown from "../Dropdown";
 import InputField from "../InputField";
-
-const rowStyles = {
-  position: "relative"
-};
 
 const dottedContainer = {
   position: "relative",
@@ -25,10 +19,6 @@ const iconStyle = {
   position: "absolute",
   top: "-5px",
   right: "-5px"
-};
-
-const dropdownContainerStyles = {
-  height: "48px"
 };
 
 class AttributeInput extends Component {

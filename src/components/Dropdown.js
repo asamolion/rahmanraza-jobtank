@@ -32,11 +32,6 @@ const labelStyle = {
   height: "34px"
 };
 
-const hintStyle = {
-  top: "5px",
-  left: "20px"
-};
-
 const iconStyle = {
   top: "-5px"
 };

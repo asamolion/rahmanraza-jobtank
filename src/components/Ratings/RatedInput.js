@@ -43,7 +43,7 @@ class RatedInput extends Component {
   };
 
   addRating = evt => {
-    let rating = (this.state.rating += 1);
+    let rating = this.state.rating + 1;
     if (rating > 10) rating = 10;
     this.setState({
       rating
@@ -51,7 +51,7 @@ class RatedInput extends Component {
   };
 
   removeRating = evt => {
-    let rating = (this.state.rating -= 1);
+    let rating = this.state.rating - 1;
     if (rating < 1) rating = 1;
     this.setState({
       rating

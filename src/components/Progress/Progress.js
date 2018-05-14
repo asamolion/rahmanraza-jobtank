@@ -2,10 +2,6 @@ import React from "react";
 
 import Indicator from "./Indicator";
 
-const containerStyle = {
-  maxWidth: "65%"
-};
-
 const rowStyle = {
   padding: "40px 0",
   borderBottom: "1px solid #e9e9e9"

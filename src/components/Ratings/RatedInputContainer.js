@@ -1,18 +1,13 @@
 import React, { Component } from "react";
 
-import { deepOrange500, grey300, grey500 } from "material-ui/styles/colors";
+import { deepOrange500 } from "material-ui/styles/colors";
 import AutoComplete from "material-ui/AutoComplete";
 import RaisedButton from "material-ui/RaisedButton";
 
-import Skill from "./RatedInput";
 import RatedInput from "./RatedInput";
 
 const col8Style = {
   marginLeft: "0"
-};
-
-const buttonStyle = {
-  borderRadius: "15px"
 };
 
 class RatedInputContainer extends Component {
@@ -39,7 +34,7 @@ class RatedInputContainer extends Component {
 
   removeSkillHandler = name => {
     this.setState({
-      inputs: this.state.inputs.filter(current => current.name != name)
+      inputs: this.state.inputs.filter(current => current.name !== name)
     });
   };
 
